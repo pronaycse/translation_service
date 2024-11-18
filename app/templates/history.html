@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File History</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Translation History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Translated File</th>
+                <th>Language</th>
+                <th>Status</th>
+                <th>Date Processed</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in history %}
+            <tr>
+                <td>{{ record.file_name }}</td>
+                <td>
+                    {% if record.translated_file %}
+                        {{ record.translated_file }}
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td>
+                <td>{{ record.language }}</td>
+                <td>
+                    {% if record.result %}
+                        Completed
+                    {% else %}
+                        In Progress
+                    {% endif %}
+                </td>
+                <td>{{ record.created_at }}</td>
+                <td>
+                    {% if record.translated_file %}
+                        <a href="/download/{{ record.translated_file }}" download>Download</a>
+                    {% else %}
+                        <em>Not Available</em>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="file"],
+select,
+button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 12px;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Actions column */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Status message styling */
+#status {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+}
